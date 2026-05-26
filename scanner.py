@@ -63,13 +63,49 @@ def ip_lookup():
         print("Failed to fetch IP info.")
 
 
+def dns_lookup():
+    print("\n======================")
+    print(" DNS Lookup Tool ")
+    print("======================")
+
+    domain = input("Enter domain: ").strip()
+
+    try:
+        ip = socket.gethostbyname(domain)
+
+        print(f"\nDomain: {domain}")
+        print(f"IP Address: {ip}")
+
+    except:
+        print("Failed to resolve domain.")
+
+
+def reverse_dns():
+    print("\n======================")
+    print(" Reverse DNS Lookup ")
+    print("======================")
+
+    ip = input("Enter IP Address: ").strip()
+
+    try:
+        hostname = socket.gethostbyaddr(ip)
+
+        print(f"\nHostname: {hostname[0]}")
+
+    except:
+        print("Reverse lookup failed.")
+
+
 while True:
     print("\n======================")
     print(" Cyber Toolkit ")
     print("======================")
+
     print("1. Port Scanner")
     print("2. IP Geolocation")
-    print("3. Exit")
+    print("3. DNS Lookup")
+    print("4. Reverse DNS Lookup")
+    print("5. Exit")
 
     choice = input("\nChoose option: ")
 
@@ -80,6 +116,12 @@ while True:
         ip_lookup()
 
     elif choice == "3":
+        dns_lookup()
+
+    elif choice == "4":
+        reverse_dns()
+
+    elif choice == "5":
         print("Goodbye.")
         break
 
