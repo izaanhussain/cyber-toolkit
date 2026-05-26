@@ -11,26 +11,38 @@ A beginner-friendly Python cybersecurity toolkit built while learning Linux, net
 - Supports domains and IP addresses
 
 ### IP Geolocation
-- Find location information of an IP address
-- Displays:
-  - Country
-  - Region
-  - City
-  - ISP
-  - Timezone
+Find information about an IP address including:
+- Country
+- Region
+- City
+- ISP
+- Timezone
+
+### DNS Lookup
+- Convert domain names into IP addresses
+- Learn how DNS resolution works
+
+### Reverse DNS Lookup
+- Convert IP addresses back into hostnames
+- Discover server/provider hostnames
+
+---
 
 ## Technologies Used
+
 - Python 3
 - socket
 - requests
+
+---
 
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/py-port-scanner.git
-cd py-port-scanner
+git clone https://github.com/izaanhussain/cyber-toolkit.git
+cd cyber-toolkit
 ```
 
 Install dependencies:
@@ -39,11 +51,15 @@ Install dependencies:
 pip install requests
 ```
 
+---
+
 ## Run
 
 ```bash
 python3 scanner.py
 ```
+
+---
 
 ## Example
 
@@ -53,16 +69,26 @@ python3 scanner.py
 ======================
 1. Port Scanner
 2. IP Geolocation
-3. Exit
+3. DNS Lookup
+4. Reverse DNS Lookup
+5. Exit
 ```
 
+---
+
 ## Learning Goals
+
 This project was built while learning:
 - Linux
 - Networking
+- DNS
 - Ports and sockets
 - Cybersecurity basics
 - Python scripting
 
+---
+
 ## Disclaimer
+
 This tool is made for educational purposes and authorized testing only.
+```
